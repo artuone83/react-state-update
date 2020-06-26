@@ -83,6 +83,10 @@ const Subscribe = () => {
       console.log("includes");
       setIsEmail(true);
     }
+
+    if(!currentValue) {
+      setSubmitValue('');
+    }
   };
 
   return (
