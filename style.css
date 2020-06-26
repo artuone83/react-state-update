@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+h1, p {
+  font-family: Lato;
+}
+.container {
+  margin: 50px 0;
+}
+.subscribe {
+  background: #F2F1F1;
+  padding: 50px
+}
+.subscribe__email {
+  padding: 5px;
+  margin: 0 10px;
+}
+.subscribe__submit {
+  padding: 5px; 
+}
+.error {
+  color: red;
+}
+.success {
+  color: green
+}
