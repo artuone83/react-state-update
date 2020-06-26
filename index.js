@@ -2,59 +2,6 @@ import React, { Component, useState } from "react";
 import { render } from "react-dom";
 import "./style.css";
 
-class IncrementClass extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      increment: 0
-    };
-    this.handleIncrement = this.handleIncrement.bind(this);
-    this.add3 = this.add3.bind(this);
-  }
-
-  handleIncrement() {
-    // this.setState({
-    //   increment: this.state.increment + 1
-    // });
-    this.setState(prevState => {
-      return {
-        increment: prevState.increment + 1
-      };
-    });
-    console.log("this.state.increment", this.state.increment);
-  }
-
-  add3() {
-    this.handleIncrement();
-    this.handleIncrement();
-    this.handleIncrement();
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <h2>IncrementClass Componenet</h2>
-        <p>Current State: {this.state.increment} </p>
-        <button type="button" onClick={this.add3}>
-          Add
-        </button>
-      </div>
-    );
-  }
-}
-
-const IncrementFunc = ({ increment, handleClick }) => {
-  return (
-    <div className="container">
-      <h2>IncrementFunc Component</h2>
-      <p>Current State: {increment} </p>
-      <button type="button" onClick={handleClick}>
-        Add
-      </button>
-    </div>
-  );
-};
-
 const Subscribe = () => {
   const [inputValue, setInputValue] = useState("");
   const [submitValue, setSubmitValue] = useState("");
@@ -146,8 +93,6 @@ const App = () => {
   return (
     <div>
       <h1>Why is STATE giving me the wrong value?</h1>
-      <IncrementFunc increment={increment} handleClick={add3} />
-      <IncrementClass />
       <Subscribe />
     </div>
   );
