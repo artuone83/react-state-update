@@ -21,7 +21,7 @@ class IncrementClass extends Component {
         increment: prevState.increment + 1
       };
     });
-    console.log("hello");
+    console.log("this.state.increment", this.state.increment);
   }
 
   add3() {
@@ -129,7 +129,7 @@ const App = () => {
     setIncrement(prevIncrement => {
       return prevIncrement + 1;
     });
-    console.log(increment); // we are one value behind
+    console.log("increment state", increment); // we are one value behind
   };
 
   const add3 = () => {
