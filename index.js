@@ -91,7 +91,7 @@ const Subscribe = () => {
 
   return (
     <div className="container">
-      <h2>IncrementClass Componenet</h2>
+      <h2>Subscribe Functional Componenet</h2>
       <form onSubmit={handleSubmit} className="subscribe">
         <label>
           Email:
