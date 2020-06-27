@@ -33,8 +33,8 @@ const Subscribe = () => {
       setIsEmail(true);
     }
 
-    if(!currentValue) {
-      setSubmitValue('');
+    if (!currentValue) {
+      setSubmitValue("");
     }
   };
 
@@ -75,23 +75,6 @@ const Subscribe = () => {
 };
 
 const App = () => {
-  const [increment, setIncrement] = useState(0);
-
-  const handleIncrement = () => {
-    // setIncrement(increment + 1);
-    setIncrement(prevIncrement => {
-      return prevIncrement + 1;
-    });
-    console.log("increment state", increment); // we are one value behind
-  };
-
-  const add3 = () => {
-    console.log("Clicked");
-    handleIncrement();
-    handleIncrement();
-    handleIncrement();
-  };
-
   return (
     <div>
       <h1>Why is STATE giving me the wrong value?</h1>
