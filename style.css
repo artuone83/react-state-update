@@ -21,9 +21,8 @@ h1, p {
 .subscribe__submit:hover {
   cursor: pointer;
 }
-not-allowed:hover {
+.subscribe__submit.not-allowed:hover {
   cursor: not-allowed;
-  background: red;
 }
 .error {
   color: red;
