@@ -26,7 +26,9 @@ const Subscribe = () => {
     setInputValue(currentValue);
     setSubmitValue(inputValue);
 
-    if (currentValue.includes("@")) {
+    const isEmailValid = currentValue.includes("@");
+
+    if (isEmailValid) {
       console.log("includes");
       setIsEmail(true);
     }
@@ -53,7 +55,7 @@ const Subscribe = () => {
           type="submit"
           value="Submit"
           aria-label="submit button"
-          className="subscribe__submit"
+          className={`subscribe__submit ${isEmail ? "" : "not-allowed"}`}
           disabled={isEmail ? false : true}
         />
       </form>

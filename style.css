@@ -18,6 +18,13 @@ h1, p {
 .subscribe__submit {
   padding: 5px; 
 }
+.subscribe__submit:hover {
+  cursor: pointer;
+}
+not-allowed:hover {
+  cursor: not-allowed;
+  background: red;
+}
 .error {
   color: red;
 }
