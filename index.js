@@ -7,7 +7,6 @@ const Subscribe = () => {
   const [submitValue, setSubmitValue] = useState("");
   const [isEmail, setIsEmail] = useState(false);
 
-
   // useEffect(() => {
   //   setSubmitValue(inputValue);
   // }, [inputValue]);
@@ -79,11 +78,18 @@ const Subscribe = () => {
   );
 };
 
+class SubscribeClassComponent extends React.Component {
+  render() {
+    return <div>Hello from class component</div>;
+  }
+}
+
 const App = () => {
   return (
     <div>
       <h1>Why is STATE giving me the wrong value?</h1>
       <Subscribe />
+      <SubscribeClassComponent />
     </div>
   );
 };
