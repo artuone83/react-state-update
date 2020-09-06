@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import "./style.css";
 
@@ -6,6 +6,11 @@ const Subscribe = () => {
   const [inputValue, setInputValue] = useState("");
   const [submitValue, setSubmitValue] = useState("");
   const [isEmail, setIsEmail] = useState(false);
+
+
+  // useEffect(() => {
+  //   setSubmitValue(inputValue);
+  // }, [inputValue]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -24,7 +29,7 @@ const Subscribe = () => {
     const currentValue = e.target.value;
 
     setInputValue(currentValue);
-    setSubmitValue(inputValue);
+    setSubmitValue(inputValue); // comment this and uncomment useEffect to have correct submitValue
 
     const isEmailValid = currentValue.includes("@");
 
