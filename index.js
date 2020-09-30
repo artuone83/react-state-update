@@ -13,8 +13,8 @@ const Subscribe = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("Subscribed");
-
+    console.log("Subscribed", submitValue);
+    
     if (isEmail) {
       setSubmitValue(inputValue);
     } else {
@@ -24,17 +24,20 @@ const Subscribe = () => {
 
   const handleChange = e => {
     console.log("on input change value");
-    setIsEmail(false);
+    
     const currentValue = e.target.value;
+    submitValue = currentValue;
 
     setInputValue(currentValue);
-    setSubmitValue(inputValue); // comment this and uncomment useEffect to have correct submitValue
+    setSubmitValue(currentValue); 
 
     const isEmailValid = currentValue.includes("@");
 
     if (isEmailValid) {
       console.log("includes");
       setIsEmail(true);
+    } else {
+      setIsEmail(false);
     }
 
     if (!currentValue) {
@@ -71,25 +74,18 @@ const Subscribe = () => {
         Submit value: {submitValue} <br />
         Submit value length: {submitValue.length}
       </p>
-      <p
-        className={`${isEmail ? "success" : "error"}`}
-      >{`Email correct: ${isEmail}`}</p>
+      <p className={`${isEmail ? "success" : "error"}`}>
+        {`Email correct: ${isEmail}`}
+      </p>
     </div>
   );
 };
-
-class SubscribeClassComponent extends React.Component {
-  render() {
-    return <div>Hello from class component</div>;
-  }
-}
 
 const App = () => {
   return (
     <div>
       <h1>Why is STATE giving me the wrong value?</h1>
       <Subscribe />
-      <SubscribeClassComponent />
     </div>
   );
 };
