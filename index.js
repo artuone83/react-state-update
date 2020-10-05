@@ -29,7 +29,7 @@ const Subscribe = () => {
     submitValue = currentValue;
 
     setInputValue(currentValue);
-    setSubmitValue(currentValue); 
+    setSubmitValue(inputValue); 
 
     const isEmailValid = currentValue.includes("@");
 
@@ -40,14 +40,14 @@ const Subscribe = () => {
       setIsEmail(false);
     }
 
-    if (!currentValue) {
-      setSubmitValue("");
-    }
+    // if (!currentValue) {
+    //   setSubmitValue("");
+    // }
   };
 
   return (
     <div className="container">
-      <h2>Subscribe Functional Componenet</h2>
+      <h2>Subscribe Functional Component</h2>
       <form onSubmit={handleSubmit} className="subscribe">
         <label>
           Email:
